@@ -1,10 +1,10 @@
-import './App.css'
-import Profile from '../Profile/Profile';
-import userData from '../../data/userData.json';
-import FriendList from '../FriendList/FriendList';
-import friends from "../friends.json";
-import TransactionHistory from '../TransactionHistory/TransactionHistory';
-import transactions from '../../data/transactions.json'
+import './App.css';
+import Profile from './Profile/Profile';
+import userData from '../data/userData.json';
+import FriendList from './FriendList/FriendList';
+import friendsData from '../data/Friends.json'; // Поправил имя переменной на friendsData
+import TransactionHistory from './TransactionHistory/TransactionHistory';
+import transactions from '../../data/transactions.json';
 
 export const App = () => {
   return (
@@ -16,10 +16,12 @@ export const App = () => {
         image={userData.avatar}
         stats={userData.stats}
       />
-      <FriendList friends={friends} />
+      <FriendList friends={friendsData} /> {/* Поправил имя переменной на friendsData */}
       <TransactionHistory transactions={transactions} />
     </>
   );
 };
+
 export default App;
+
 
