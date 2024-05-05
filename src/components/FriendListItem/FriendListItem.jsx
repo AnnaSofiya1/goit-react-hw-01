@@ -1,17 +1,17 @@
-import css from './FriendList.module.css';
-import FriendListItem from './FriendListItem/FriendListItem';
+import css from './FriendListItem.module.css';
 
-export const FriendList = ({ friends }) => {
+
+export function FriendListItem({ friend: { avatar, name, isOnline } }) {
   return (
-    <ul className={css.list}>
-      {friends.map((friend) => (
-        <li key={friend.id} className={css.listItem}>
-          <FriendListItem friend={friend} />
-        </li>
-      ))}
-    </ul>
+    <div>
+      <img className={css.avatar} src={avatar} alt="User avatar" width="80" />
+      <p className={css.name}>{name}</p>
+      <p className={isOnline ? css.isOnline : css.isOffline}>
+        {isOnline ? "Online" : "Offline"}
+      </p>
+    </div>
   );
-};
+}
 
-export default FriendList;
+export default FriendListItem;
 

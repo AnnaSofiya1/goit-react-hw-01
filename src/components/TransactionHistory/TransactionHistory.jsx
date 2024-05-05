@@ -1,5 +1,5 @@
 import css from './TransactionHistory.module.css';
-import TransactionHistoryItem from './TransactionHistoryItem/TransactionHistoryItem';
+import TransactionHistoryItem from '../TransactionHistoryItem/TransactionHistoryItem';
 
 const TransactionHistory = ({ transactions }) => {
   return (
@@ -18,5 +18,6 @@ const TransactionHistory = ({ transactions }) => {
 </table>
   );
 };
+
 
 export default TransactionHistory
